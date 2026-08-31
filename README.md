@@ -1,12 +1,23 @@
 # Braid
 
+[![CI](https://github.com/Eddiegah/braid/actions/workflows/ci.yml/badge.svg)](https://github.com/Eddiegah/braid/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Live demo](https://img.shields.io/badge/demo-live-3ecf8e?logo=vercel&logoColor=white)](https://braid-rose.vercel.app)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js&logoColor=white)
+![Tests](https://img.shields.io/badge/tests-20%20passing-brightgreen)
+
+**[braid-rose.vercel.app](https://braid-rose.vercel.app)**
+
 A real-time collaborative text editor built on a from-scratch CRDT - a
 Replicated Growable Array (RGA), the classic sequence CRDT for
 collaborative text (Roh et al., 2011). No server, no operational-
 transform library, no external CRDT package - the merge algorithm that
 makes concurrent edits converge is entirely implemented in
 `src/lib/crdt/`, and it's what's actually running under the three
-editor panes in the demo.
+editor panes in the demo. Each pane shows a live count of messages
+received and a brief highlight the instant one arrives, so the network
+simulation isn't just claimed in a status line - you can watch it happen.
 
 ## What "real" means here
 
@@ -118,3 +129,7 @@ npm test
 - Compaction of tombstones - a long-lived real document would need a
   garbage-collection strategy for deleted nodes; this demo's documents
   are short-lived enough that it doesn't matter
+
+## License
+
+MIT © [Edmund Eric Gah](https://github.com/Eddiegah) - see [LICENSE](LICENSE).

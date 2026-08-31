@@ -2,6 +2,11 @@
   "name": "braid",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Eddiegah/braid.git"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
