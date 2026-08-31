@@ -12,9 +12,26 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const title = "Braid";
+const description = "A real-time collaborative text editor built on a from-scratch CRDT (RGA) - watch three replicas converge under any delivery order.";
+const url = "https://braid-rose.vercel.app";
+
 export const metadata: Metadata = {
-  title: "Braid",
-  description: "A real-time collaborative text editor built on a from-scratch CRDT (RGA) - watch three replicas converge under any delivery order.",
+  title,
+  description,
+  metadataBase: new URL(url),
+  openGraph: {
+    title,
+    description,
+    url,
+    siteName: title,
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title,
+    description,
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
